@@ -2,7 +2,7 @@ Config {
     position = Bottom,
     font =  "xft:Droid Sans Mono:size=10:antialias=true",
     --template = "%battery% | %multicpu% | %coretemp% | %dynnetwork% }%StdinReader%{ %date%", 
-    template = "%battery% | %volume% | %wifi% }%StdinReader%{ %spotify% %date%", 
+    template = "%battery% | %volume% | %brightness% | %wifi% }%StdinReader%{ %spotify% %date%", 
     commands = 
     [
         Run DynNetwork ["--template", "<dev>: <tx>kB/s|<rx>kB/s",
@@ -44,6 +44,7 @@ Config {
         Run StdinReader,
         Run Com "/home/chris/scripts/getvolume.sh" [] "volume" 1,
         Run Com "/usr/bin/python3" ["/home/chris/scripts/wifi.py"] "wifi" 50,
-        Run Com "/usr/bin/python3" ["/home/chris/scripts/spotify.py"] "spotify" 10
+        Run Com "/usr/bin/python3" ["/home/chris/scripts/spotify.py"] "spotify" 10,
+        Run Com "/usr/bin/python3" ["/home/chris/scripts/brightness.py"] "brightness" 9
         ]
 }
