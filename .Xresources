@@ -1,42 +1,6 @@
 ! special
-! URxvt.font: 9x15
-URxvt.font:	    xft:Droid Sans Mono:size=12:antialias=true
-! special
-*.foreground:   #c7ccd1
-*.background:   #1c2023
-*.cursorColor:  #c7ccd1
-
-! black
-!*.color0:       #1c2023
-!*.color8:       #747c84
-
-! red
-!*.color1:       #c7ae95
-!*.color9:       #c7ae95
-
-! green
-!*.color2:       #95c7ae
-!*.color10:      #95c7ae
-
-! yellow
-!*.color3:       #aec795
-!*.color11:      #aec795
-
-! blue
-!*.color4:       #ae95c7
-!*.color12:      #ae95c7
-
-! magenta
-!*.color5:       #c795ae
-!*.color13:      #c795ae
-
-! cyan
-!*.color6:       #95aec7
-!*.color14:      #95aec7
-
-! white
-!*.color7:       #c7ccd1
-!*.color15:      #f3f4f5
+URxvt.letterSpace: 0
+URxvt.font:	    xft:Roboto Mono for Powerline:size=11
 
 ! special
 *.foreground:   #c5c8c6
@@ -74,3 +38,26 @@ URxvt.font:	    xft:Droid Sans Mono:size=12:antialias=true
 ! white
 *.color7:       #7f8c8d
 *.color15:      #95a5a6
+
+!
+! scrollbar
+!
+! enable scrollbar
+URxvt*scrollBar:          false
+! scrollbar width
+URxvt*thickness:          5
+! scrollbar color
+URxvt*scrollColor:        #1E1E1E
+! scrollbar trough area color
+!URxvt*troughColor:        #333333
+! scrollbar without a trough
+!URxvt*scrollBar_floating: false
+! scrollbar to the right
+URxvt*scrollBar_right:    true
+! scrollbar style
+URxvt*scrollstyle:        plain
+
+! URxvt by default does not support using the control+arrows to advance or
+! retreat one word at a time. The following two codes re-enable this.
+URxvt.keysym.C-Right    : \033[1;5C
+URxvt.keysym.C-Left     : \033[1;5D
