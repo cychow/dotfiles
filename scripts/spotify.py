@@ -17,8 +17,8 @@ currentData = currString.split('\n')
 try:
     artist = currentData[2][6:].strip()
     title = currentData[3][5:].strip()
-    wrappedText = textwrap.shorten(artist + " - " + title, width=50, placeholder="...")
-    print("<fc=#669900>Spotify</fc>: " + wrappedText + ' |')
+    wrappedText = textwrap.shorten(artist + " - " + title, width=70, placeholder="...")
+    print(u"<fc=#669900><fn=1></fn></fc> " + wrappedText + u'   ')
 except Exception as e:
     #print("error reading spotify info: " + str(e))
     exit()

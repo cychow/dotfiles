@@ -1,10 +1,13 @@
 ! special
 URxvt.letterSpace: 0
 URxvt.font:	    xft:Roboto Mono for Powerline:size=11
+URxct.depth:    32
 
+! new desaturated colors
 ! special
 *.foreground:   #c5c8c6
-*.background:   #1d1f21
+!*.background:   #1d1f21
+*.background:   #000000
 *.cursorColor:  #c5c8c6
 
 ! black
@@ -12,32 +15,72 @@ URxvt.font:	    xft:Roboto Mono for Powerline:size=11
 *.color8:       #373b41
 
 ! red
-*.color1:       #cc0000
-*.color9:       #ff4444
+*.color1:       #841e1e
+*.color9:       #bd6060
 
 ! green
-*.color2:       #669900
-*.color10:      #99cc00
+*.color2:       #6f883c
+*.color10:      #9fb852
 
 ! yellow
-*.color3:       #ff8800
-*.color11:      #ffbb33
+*.color3:       #cd924e
+*.color11:      #dfbd79
 
 ! blue
-*.color4:       #0099cc
-*.color12:      #33b5e5
+*.color4:       #38859e
+*.color12:      #63a4bc
 
 ! magenta
-*.color5:       #9933cc
-*.color13:      #aa66cc
+*.color5:       #7e4b97
+*.color13:      #9876a9
 
 ! cyan
-*.color6:       #27ae60
-*.color14:      #2ecc71
+*.color6:       #52956e
+*.color14:      #60af81
 
 ! white
-*.color7:       #7f8c8d
-*.color15:      #95a5a6
+*.color7:       #a4b5b6
+*.color15:      #b8cccd
+
+
+! old android colors
+
+! special
+!*.foreground:   #c5c8c6
+!*.background:   #1d1f21
+!*.cursorColor:  #c5c8c6
+
+! black
+!*.color0:       #282a2e
+!*.color8:       #373b41
+
+! red
+!*.color1:       #cc0000
+!*.color9:       #ff4444
+
+! green
+!*.color2:       #669900
+!*.color10:      #99cc00
+
+! yellow
+!*.color3:       #ff8800
+!*.color11:      #ffbb33
+
+! blue
+!*.color4:       #0099cc
+!*.color12:      #33b5e5
+
+! magenta
+!*.color5:       #9933cc
+!*.color13:      #aa66cc
+
+! cyan
+!*.color6:       #27ae60
+!*.color14:      #2ecc71
+
+! white
+!*.color7:       #7f8c8d
+!*.color15:      #95a5a6
 
 !
 ! scrollbar

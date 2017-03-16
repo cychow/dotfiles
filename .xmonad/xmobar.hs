@@ -30,9 +30,9 @@ Config {
         Run Battery ["--template", "<acstatus>",
             "--Low",    "10",
             "--High",   "80",
-            "--low",    "#ff4444",
-            "--normal", "#ff8800",
-            "--high",    "#669900",
+            "--low",    "#841e1e",
+            "--normal", "#cd924e",
+            "--high",    "#6f883c",
             -- Discharging
             "--",
             "-o","<left>% (<timeleft>)",
