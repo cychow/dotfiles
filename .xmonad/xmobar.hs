@@ -1,5 +1,6 @@
 Config {
-    position = Bottom,
+    position = Top,
+    alpha = 128,
     font =  "xft:SFNS Display:size=11,xft:FontAwesome:pixelsize=15",
     additionalFonts = ["xft:FontAwesome:pixelsize=15"],
     --template = "%battery% | %multicpu% | %coretemp% | %dynnetwork% }%StdinReader%{ %date%", 
@@ -30,9 +31,9 @@ Config {
         Run Battery ["--template", "<acstatus>",
             "--Low",    "10",
             "--High",   "80",
-            "--low",    "#841e1e",
+            "--low",    "#ff4444",
             "--normal", "#cd924e",
-            "--high",    "#6f883c",
+            "--high",    "#9fb852",
             -- Discharging
             "--",
             "-o","<left>% (<timeleft>)",
@@ -41,11 +42,12 @@ Config {
             -- Charged
             "-i","<fn=1>\xf0e7</fn> <left>%"
         ] 50,
-        Run Date "%-m/%-e/%G %-I:%M %p" "date" 10,
+        Run Date "%-m/%-e/%G   %-I:%M %p" "date" 10,
         Run StdinReader,
         Run Com "/usr/bin/python3" ["/home/chris/scripts/getvolume.py"] "volume" 1,
         Run Com "/usr/bin/python3" ["/home/chris/scripts/wifi.py"] "wifi" 50,
         Run Com "/usr/bin/python3" ["/home/chris/scripts/spotify.py"] "spotify" 10,
         Run Com "/usr/bin/python3" ["/home/chris/scripts/brightness.py"] "brightness" 9
+        
         ]
 }
