@@ -2,6 +2,8 @@
 " File name in status
 "set statusline+=%f
 "set laststatus=2
+set hlsearch
+set t_Co=16
 set showtabline=2
 set number
 set ruler
@@ -13,7 +15,7 @@ set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
-set ttyfast
+"set ttyfast
 set clipboard=unnamed,unnamedplus
 set mouse=a
 set whichwrap+=<,>,h,l,[,]
