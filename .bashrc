@@ -3,10 +3,16 @@
 #
 # source aliases file
 source ~/.bash_aliases
+export DISPLAY=:0
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+complete -d cd
+complete -Efd
+
 alias ls='ls --color=auto'
+alias la='ls -lauh'
+alias sourcerc='source ~/.bashrc'
 
 # PS1='[\u@\h \W]\$ '
 # get current branch in git repo
@@ -56,4 +62,21 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\e[34m[\u@\h]\e[94m[\W]\e[36m\`parse_git_branch\`\\e[0m\$ "
+
+export PS1="\[\e[34m\][\u@\h]\[\e[94m\][\W]\[\e[36m\]\`parse_git_branch\`\[\\e[0m\]\$ "
+export PS1="\[\e[34m\][\u@\h]\[\e[94m\][\W]\[\e[36m\]\\[\\e[0m\]\$ "
+
+trap 'echo -ne "\033]0;$BASH_COMMAND\007"' DEBUG
+function show_name(){ 
+    if [[ -n "$BASH_COMMAND" ]]; 
+    then 
+    echo -en "\033]0;`pwd`\007"; 
+    else 
+    echo -en "\033]0;$BASH_COMMAND\007"; 
+    fi 
+}
+export PROMPT_COMMAND='show_name'
+
+export PATH=$PATH:'/cygdrive/c/Program Files (x86)/Zandronum'
+
+alias tmux='tmux -u'
